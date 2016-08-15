@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.pingidentity</groupId>
+  <artifactId>idp-adapter-example</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>idp-adapter-example</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <junit.version>4.11</junit.version>
+    <mockito.version>1.9.5</mockito.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.addjars-maven-plugin</groupId>
+        <artifactId>addjars-maven-plugin</artifactId>
+        <version>1.0.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>add-jars</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>${pingfederate.home}/sdk/lib</directory>
+                </resource>
+                <resource>
+                  <directory>${pingfederate.home}/lib</directory>
+                </resource>
+                <resource>
+                  <directory>${pingfederate.home}/server/default/lib</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

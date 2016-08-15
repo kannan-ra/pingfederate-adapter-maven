@@ -1,0 +1,1 @@
+# pingfederate-idp-adapter-maven
