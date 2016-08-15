@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static junit.framework.Assert.fail;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SampleSubnetAdapterTest
@@ -12,8 +12,7 @@ public class SampleSubnetAdapterTest
 
     @Test
     public void testSample() {
-        //fail("Test not implemented");
-        System.out.println("Test");
+        assertThat("Test not implemented", false);
     }
 
 }
