@@ -4,7 +4,10 @@ Traditionally PingIdentity SDK provide Ant build for their adapter development. 
 
 #### Build Instructions
 
-The main compile time dependency from the Vendor is
+Install the library `pf-protocolengine.jar` locally from source from `<pf_install>/server/default/lib`.
+Or remote deploy this to repo managers like Nexus or Artifactory
+
+Then add it as compile time dependency in the maven project
 ```
 <dependency>
     <groupId>pingfederate</groupId>
@@ -13,8 +16,6 @@ The main compile time dependency from the Vendor is
 </dependency>
 ```
 
-Install this library locally from source from `<pf_install>/server/default/lib`.
-Or remote deploy this to repo managers like Nexus or Artifactory
 
 ```
 mvn clean install
